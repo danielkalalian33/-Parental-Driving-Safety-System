@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "405658734664",
+    "firebase_url": "https://grad-9b9d6.firebaseio.com",
+    "project_id": "grad-9b9d6",
+    "storage_bucket": "grad-9b9d6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:405658734664:android:d7522d86cd02d60c0b087d",
+        "android_client_info": {
+          "package_name": "com.ParentalDrivingSafetySystem.Project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "405658734664-a8jmash51t68ot07e504t7vcqk4vh0dp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMLy1wTS_FT8-l3mO9BXHSEM4bXeOaGDQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "405658734664-a8jmash51t68ot07e504t7vcqk4vh0dp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

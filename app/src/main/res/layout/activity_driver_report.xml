@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".driverReport"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="450dp"
+        android:layout_height="220dp"
+        android:background="@color/blue"
+        android:layout_marginTop="-98dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="160dp"
+            android:text="Driving Rating"
+            android:textSize="30dp"
+            />
+        <Button
+            android:id="@+id/Back"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="1dp"
+            android:layout_marginLeft="880dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/bbback"
+            android:textSize="20dp"
+            android:textColor="@color/Black"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-370dp"
+        android:layout_marginTop="10dp"
+        android:text="60"
+        android:rating="3.5"
+        android:textSize="120dp"
+        android:id="@+id/Rating"
+        android:progressTint="@color/white"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-270dp"
+        android:layout_marginTop="150dp"
+        android:text="Name"
+        android:textSize="30dp"
+        android:textStyle="bold|italic"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-81dp"
+        android:layout_marginTop="200dp"
+        android:text="Daniel Nagi"
+        android:textSize="30dp"
+        android:id="@+id/Name"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-153dp"
+        android:layout_marginTop="250dp"
+        android:text="Mobile No"
+        android:textSize="30dp"
+        android:textStyle="bold|italic"
+         />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-133dp"
+        android:layout_marginTop="300dp"
+        android:text="01112885573"
+        android:textSize="30dp"
+        android:id="@+id/driverMobileNo"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-183dp"
+        android:layout_marginTop="350dp"
+        android:text="Parent Name"
+        android:textSize="30dp"
+        android:textStyle="bold|italic"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-170dp"
+        android:layout_marginTop="400dp"
+        android:text="Nagi Youssef"
+        android:textSize="30dp"
+        android:id="@+id/parentName"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-183dp"
+        android:layout_marginTop="450dp"
+        android:text="Mobile No"
+        android:textSize="30dp"
+        android:textStyle="bold|italic"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-132dp"
+        android:layout_marginTop="500dp"
+        android:text="01227659905"
+        android:textSize="30dp"
+        android:id="@+id/parentMobileNo"
+        />
+
+</LinearLayout>

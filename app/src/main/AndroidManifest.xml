@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ParentalDrivingSafetySystem.Project">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <uses-feature
+        android:name="android.hardware.sensor.accelerometer"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.ParentalDrivingSafetySystem.Project.ForgotPassword"></activity>
+        <activity android:name="com.ParentalDrivingSafetySystem.Project.Dropdownhistory" />
+        <activity android:name="com.ParentalDrivingSafetySystem.Project.Dropdownlist" />
+        <activity android:name="com.ParentalDrivingSafetySystem.Project.History" />
+        <activity android:name="com.ParentalDrivingSafetySystem.Project.parentPage" />
+        <activity android:name="com.ParentalDrivingSafetySystem.Project.parentReport" />
+        <activity android:name="com.ParentalDrivingSafetySystem.Project.driverReport" />
+        <activity android:name="com.ParentalDrivingSafetySystem.Project.Loading">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.ParentalDrivingSafetySystem.Project.Signupdriver" />
+        <activity android:name="com.ParentalDrivingSafetySystem.Project.Signupas" />
+        <activity android:name="com.ParentalDrivingSafetySystem.Project.Signup" />
+        <activity android:name="com.ParentalDrivingSafetySystem.Project.Signin" />
+        <activity android:name="com.ParentalDrivingSafetySystem.Project.addDriver" />
+        <activity android:name="com.ParentalDrivingSafetySystem.Project.VideoFaceDetectionActivity" />
+
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="face" />
+
+        <activity
+            android:name="com.ParentalDrivingSafetySystem.Project.MainActivity"
+            android:label="Crash Alert!">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.ParentalDrivingSafetySystem.Project.CheckCertainty"
+            android:label="Alert!"
+            android:theme="@android:style/Theme.Holo.Dialog">
+            <intent-filter>
+                <action android:name="com.example.anask.myapplication.CheckCertainty" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.ParentalDrivingSafetySystem.Project.About"
+            android:label="About the App"
+            android:theme="@android:style/Theme.Dialog">
+            <intent-filter>
+                <action android:name="com.ParentalDrivingSafetySystem.Project.About" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.ParentalDrivingSafetySystem.Project.ShakeService"
+            android:enabled="true" />
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity android:name="com.ParentalDrivingSafetySystem.Project.FaceDetectionActivity" />
+    </application>
+
+</manifest>

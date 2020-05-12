@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:background="@color/blue"
+    >
+    <Button
+        android:id="@+id/Back"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="880dp"
+        android:background="@drawable/bbback"
+        android:textSize="20dp"
+        android:textColor="@color/Black"
+        android:textStyle="bold" />
+    <ProgressBar
+        android:id="@+id/dropdownprogressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/txtsp"
+        android:layout_marginTop="50dp"
+        style="?android:attr/progressBarStyle"
+        android:layout_gravity="end"
+        android:visibility="gone" />
+    <TextView
+        android:id="@+id/txtsp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Choose Driver"
+        android:layout_above="@id/spinner"
+        android:gravity="center_horizontal"
+        android:textColor="@color/wallpaperCol"/>
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+    <Button
+        android:id="@+id/submit"
+        android:layout_below="@+id/spinner"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:text="Submit"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:textColor="@color/wallpaperCol"
+        android:background="@drawable/buttonshape"
+        android:backgroundTint="@color/Black"
+        android:textSize="19dp"
+        />
+
+</RelativeLayout>
