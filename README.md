@@ -48,3 +48,14 @@ After pre-preparing the information, Fast-DTW (Fast DynamicTime Warping) was use
 ![Test Image 4](https://github.com/danielkalalian33/-Parental-Driving-Safety-System/blob/master/image/Dataset/Suddenly%20Stop.png)
 ## Sudden Acceleration
 ![Test Image 4](https://github.com/danielkalalian33/-Parental-Driving-Safety-System/blob/master/image/Dataset/Sudden%20Acceleration.png)
+# Results
+![Test Image 4](https://github.com/danielkalalian33/-Parental-Driving-Safety-System/blob/master/image/Results/Matrix.png)
+Accuracy: 92.5 % 
+# Achievements
+![Test Image 4](https://github.com/danielkalalian33/-Parental-Driving-Safety-System/blob/master/image/Achievements/Our%20Images.jpg)
+# Winning the 2nd place
+In the Internet of Things Track in the Graduation Project Competition for the project entitled "Parental Driving Safety System" supervised by "Prof. Mohamed Elgazzar" at The International Japan-Africa Conference
+# Certificate
+![Test Image 4](https://github.com/danielkalalian33/-Parental-Driving-Safety-System/blob/master/image/Achievements/Certificate.png)
+
+
