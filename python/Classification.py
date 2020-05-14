@@ -7,6 +7,7 @@ from scipy.spatial.distance import euclidean
 from fastdtw import fastdtw
 from itertools import groupby
 import datetime
+import time
 import numpy as np
 from geopy.geocoders import Nominatim
 import mpu
@@ -32,9 +33,23 @@ def windowing(array,steps,windowsize):
         h3.append(h)
         h=[]
     return h3
+# geolocator = Nominatim(user_agent="geoapiExercises")
+def city_state_country(coord):
+    # datetime.time.sleep(.300)
+    geolocator = Nominatim(user_agent="geoapiExercises")
+    location = geolocator.reverse(coord, exactly_one=True)
+    # location = geolocator.geocode(coord, timeout=None)
+    address = location.raw['address']
+    state = address.get('state', '')
+    road = address.get('road', '')
+    town=address.get('town', '')
+    suburb=address.get('suburb', '')
+    country="مصر / "
 
+    lo= road, country,town,state,suburb
 
-
+    l= lo[1] + " " + lo[0] + " " +lo[2]+" "+lo[3]+" "+lo[4]
+    return l
 firebase = firebase.FirebaseApplication('https://grad-9b9d6.firebaseio.com/', None)
 Trip = firebase.get('/Trip',None)
 Accelerometer = firebase.get('/Accelerometer',None)
@@ -65,16 +80,11 @@ for x in(Trip):
         endlocationindex = float(endLat), float(endLongitude)
         print(locationindex)
         print(endlocationindex)
-        geolocator = Nominatim(user_agent="location2.py")
-        location = geolocator.reverse(locationindex)
-        location2 = geolocator.reverse(endlocationindex)
-        getlocationstart = str(location.address)
-        getendlocation = str(location2.address)
+        getlocationstart=city_state_country(locationindex)
+        time.sleep(1)
+        getendlocation = city_state_country(endlocationindex)
         print(getlocationstart)
         print(getendlocation)
-        # dist = mpu.haversine_distance((startLat, startLongitude), (endLat, endLongitude))
-        # distance = round(dist, 2)
-        # print(distance)
         q = len(Accelerometer.get(accid).get('X'))
         testarry = []
         XArry = []
@@ -97,7 +107,7 @@ for x in(Trip):
         pn=windowing(finalarray, 7, 21)
         p=np.array(pn)
         print(p)
-        Path = "C:\\Users\\luka\\Documents\\gp code+dataset\\code\\gp project\\Dataset\\Training2\\"
+        Path = "C:\\Users\\minaluka\\Documents\\gp code+dataset\\code\\gp project\\Dataset\\Training2\\"
         filelist = os.listdir(Path)
         for file in filelist:
             AllDatasetNames.append(file[:file.index("all", ) - 1])
