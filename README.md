@@ -35,7 +35,7 @@ the required classification on the explicit window size
 of given enormous array.
 # Images(Before Low Pass Filter)
 ![Test Image 4](https://github.com/danielkalalian33/-Parental-Driving-Safety-System/blob/master/image/Preprocessing/Before%20Low%20Pass%20Filter.png)
-# Images(Before Low Pass Filter)
+# Images(After Low Pass Filter)
 ![Test Image 4](https://github.com/danielkalalian33/-Parental-Driving-Safety-System/blob/master/image/Preprocessing/No%20Low%20Pass%20Filter.png)           
 
 # Processing
