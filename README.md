@@ -17,3 +17,17 @@ Road accidents are a worldwide disaster with an ever-rising pattern.  Absence of
 
 ##    System Overview
 ![Test Image 4](https://github.com/danielkalalian33/-Parental-Driving-Safety-System/blob/master/image/System%20Overview/Overview.jpeg)
+## Input &Preprocessing
+
+we get the accelerometer readings in the coordinates( X, Y, Z) from the mobile device and pass the readings to a low pass filter algorithm to reduce noise and remove
+gravity for getting accurate readings to classify the behaviour
+of the driver.Also,we usedWindow Sliding Technique to perform
+the required classification on the explicit window size
+of given enormous array.
+# Images(Before Low Pass Filter)
+![Test Image 4](https://github.com/danielkalalian33/-Parental-Driving-Safety-System/blob/master/image/Preprocessing/Before%20Low%20Pass%20Filter.png)
+# Images(Before Low Pass Filter)
+![Test Image 4](https://github.com/danielkalalian33/-Parental-Driving-Safety-System/blob/master/image/Preprocessing/No%20Low%20Pass%20Filter.png)           
+
+
+            
