@@ -1,6 +1,4 @@
-<p align="center">
 ![Test Image 4](https://github.com/danielkalalian33/-Parental-Driving-Safety-System/blob/master/image/last%20logo.png)
-</p>
 # Parental-Driving-Safety-System.
 
 ## Project Description
