@@ -13,6 +13,15 @@ Road accidents are a worldwide disaster with an ever-rising pattern.  Absence of
 
             3.Driving Behavior Classification
 #  GUI
+## Parent
+![Test Image 4](https://github.com/danielkalalian33/-Parental-Driving-Safety-System/blob/master/image/Gui/1st%20Parent.png)
+![Test Image 4](https://github.com/danielkalalian33/-Parental-Driving-Safety-System/blob/master/image/Gui/2nd%20Parent.png)
+![Test Image 4](https://github.com/danielkalalian33/-Parental-Driving-Safety-System/blob/master/image/Gui/3rd%20Parent.png)
+## Driver
+![Test Image 4](https://github.com/danielkalalian33/-Parental-Driving-Safety-System/blob/master/image/Gui/1st.png)
+![Test Image 4](https://github.com/danielkalalian33/-Parental-Driving-Safety-System/blob/master/image/Gui/2nd.png)
+![Test Image 4](https://github.com/danielkalalian33/-Parental-Driving-Safety-System/blob/master/image/Gui/3rd.png)
+
 
 
 ##    System Overview
@@ -29,5 +38,13 @@ of given enormous array.
 # Images(Before Low Pass Filter)
 ![Test Image 4](https://github.com/danielkalalian33/-Parental-Driving-Safety-System/blob/master/image/Preprocessing/No%20Low%20Pass%20Filter.png)           
 
-
-            
+# Processing
+After pre-preparing the information, Fast-DTW (Fast DynamicTime Warping) was used to differentiate between thebehaviours taken by the driver using the accelerometer thatis built-in in the smartphone to make the parent notified withthe driver behaviors and to be as accurate as possible Dataset Sample for our dataset 
+## Left Aggressive
+![Test Image 4](https://github.com/danielkalalian33/-Parental-Driving-Safety-System/blob/master/image/Dataset/Left%20Aggressive.png)
+## right aggressive         
+![Test Image 4](https://github.com/danielkalalian33/-Parental-Driving-Safety-System/blob/master/image/Dataset/right%20aggressive.png)
+## Suddenly Stop
+![Test Image 4](https://github.com/danielkalalian33/-Parental-Driving-Safety-System/blob/master/image/Dataset/Suddenly%20Stop.png)
+## Sudden Acceleration
+![Test Image 4](https://github.com/danielkalalian33/-Parental-Driving-Safety-System/blob/master/image/Dataset/Sudden%20Acceleration.png)
