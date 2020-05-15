@@ -50,7 +50,7 @@ After pre-preparing the information, Fast-DTW (Fast DynamicTime Warping) was use
 ![Test Image 4](https://github.com/danielkalalian33/-Parental-Driving-Safety-System/blob/master/image/Dataset/Sudden%20Acceleration.png)
 # Results
 ![Test Image 4](https://github.com/danielkalalian33/-Parental-Driving-Safety-System/blob/master/image/Results/Matrix.png)
-Accuracy: 92.5 % 
+# Accuracy: 92.5 % 
 # Achievements
 ![Test Image 4](https://github.com/danielkalalian33/-Parental-Driving-Safety-System/blob/master/image/Achievements/Our%20Images.jpg)
 # Winning the 2nd place
