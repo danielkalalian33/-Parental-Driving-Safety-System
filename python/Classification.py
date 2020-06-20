@@ -5,6 +5,7 @@ import re
 import math
 from scipy.spatial.distance import euclidean
 from fastdtw import fastdtw
+from geopy.exc import GeocoderTimedOut
 from itertools import groupby
 import datetime
 import time
@@ -33,22 +34,22 @@ def windowing(array,steps,windowsize):
         h3.append(h)
         h=[]
     return h3
-# geolocator = Nominatim(user_agent="geoapiExercises")
+geolocator = Nominatim(user_agent="geoapiExercises")
 def city_state_country(coord):
     # datetime.time.sleep(.300)
-    geolocator = Nominatim(user_agent="geoapiExercises")
+    geolocator = Nominatim(user_agent="driversystem")
     location = geolocator.reverse(coord, exactly_one=True)
-    # location = geolocator.geocode(coord, timeout=None)
     address = location.raw['address']
     state = address.get('state', '')
     road = address.get('road', '')
-    town=address.get('town', '')
-    suburb=address.get('suburb', '')
-    country="مصر / "
+    town = address.get('town', '')
+    suburb = address.get('suburb', '')
+    country = "مصر/ "
+    city = address.get('city', '')
 
-    lo= road, country,town,state,suburb
+    lo = road, country, city, town, state, suburb
 
-    l= lo[1] + " " + lo[0] + " " +lo[2]+" "+lo[3]+" "+lo[4]
+    l = lo[1] + lo[2] + "," + lo[0] + " " + lo[3] + " " + lo[4] + "," + lo[5]
     return l
 firebase = firebase.FirebaseApplication('https://grad-9b9d6.firebaseio.com/', None)
 Trip = firebase.get('/Trip',None)
@@ -74,16 +75,17 @@ for x in(Trip):
         endLat = Trip.get(x).get('endLat')
         print("driver id" + str(driver_id))
         print("acc id of trip" + str(accid))
-        print(startLongitude)
-        print(startLat)
         locationindex = float(startLat), float(startLongitude)
         endlocationindex = float(endLat), float(endLongitude)
         print(locationindex)
         print(endlocationindex)
         getlocationstart=city_state_country(locationindex)
-        time.sleep(1)
-        getendlocation = city_state_country(endlocationindex)
         print(getlocationstart)
+        time.sleep(10)
+
+        # if(endlocationindex=="(0.0, 0.0)"):
+        #     endlocationindex=locationindex
+        getendlocation = city_state_country(endlocationindex)
         print(getendlocation)
         q = len(Accelerometer.get(accid).get('X'))
         testarry = []
@@ -107,7 +109,7 @@ for x in(Trip):
         pn=windowing(finalarray, 7, 21)
         p=np.array(pn)
         print(p)
-        Path = "C:\\Users\\minaluka\\Documents\\gp code+dataset\\code\\gp project\\Dataset\\Training2\\"
+        Path = "C:\\Users\\luka\\Documents\\gp code+dataset\\code\\gp project\\Dataset\\Training2\\"
         filelist = os.listdir(Path)
         for file in filelist:
             AllDatasetNames.append(file[:file.index("all", ) - 1])
